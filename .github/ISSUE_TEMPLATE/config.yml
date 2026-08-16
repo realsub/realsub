@@ -1,0 +1,7 @@
+# Issue template chooser (GitHub reads this file on the New issue page).
+# Maintained upstream in the RealSub app repository; do not edit here directly.
+blank_issues_enabled: true
+contact_links:
+  - name: "Private support / 不便公开的问题 / 公開したくないお問い合わせ"
+    url: "mailto:realsub.support@gmail.com"
+    about: "Purchase problems, or anything you would rather not post publicly — e-mail us instead. 购买问题等不便公开的事情请发邮件。購買問題等不便公開的事項請寄信。購入に関する問題など、公開したくない内容はメールでどうぞ。"
