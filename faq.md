@@ -5,22 +5,16 @@
 
 **English** · [简体中文](faq.zh.md) · [繁體中文](faq.zh-TW.md) · [日本語](faq.ja.md)
 
-> App 1.0.0 / last updated 2026-08-13. Free tiers, model names and endpoints of third-party
+> App 1.0.0 / last updated 2026-09-13. Free tiers, model names and endpoints of third-party
 > services are the vendors' to change; their own documentation is authoritative.
 
 ---
 
-## Q1. Does translation work from mainland China? How do I make it faster?
+## Q1. Does translation work from mainland China?
 
 - **The default "Microsoft Translator" source works from mainland China.** We tested the full request flow from a mainland node on 2026-08-13 and got translations back in about 1.2 seconds. Nothing extra to configure.
-- **For lower latency inside China, you can plug in a free domestic LLM endpoint.** Register at Zhipu's open platform (bigmodel.cn; a mainland phone number is required), get an API key, then in RealSub go to **Settings → Translation → Translation source → "LLM (OpenAI-compatible)"** and fill in:
-  - API URL: `https://open.bigmodel.cn/api/paas/v4` (stop at `/v4`; the rest of the path is appended automatically)
-  - API key: the key you were issued
-  - Model name: `glm-4-flash`
-
-  That model is **free at the time of writing**, but the vendor decides its free tier and model naming and may change either — **always check the vendor's own documentation**. RealSub neither bundles nor proxies any third-party account. If the endpoint URL is left empty, RealSub silently falls back to Microsoft Translator (Edge).
 - **Do not pick "Google Translate" in mainland China** — it times out there in our tests and will simply keep failing.
-- **The DeepL source needs your own API key** and does nothing without one.
+- **Advanced users can pick "Local / LAN server"**: enter the address of an OpenAI-compatible translation server running on your own PC or LAN (Ollama, LM Studio, llama-server and the like). No account or API key is involved. Only local and LAN addresses are accepted; public internet addresses are rejected — RealSub does not integrate any third-party service that requires registration or payment.
 - If a translation source fails, RealSub falls back to the default source and tells you in the UI; transcription is never blocked. **Recognition is fully offline — subtitles keep coming even with no network at all.**
 
 ## Q2. Why are no subtitles appearing?
@@ -30,7 +24,7 @@ Check these in order of likelihood:
 1. **What is playing is singing, pure music, or a voice with radio/walkie-talkie processing.** Those do not produce subtitles at the moment.
 2. **The wrong audio source is selected.** If you picked a specific app under Settings → Transcription → Audio source, only that app is transcribed. Switch back to "Entire system (default)" to capture everything.
 3. **The app you want is not in the list.** Windows only creates an audio session for an app once it has actually made a sound — play something first, then refresh the list. Per-app capture also requires Windows 10 version 2004 or newer.
-4. **System volume is at zero or the app is muted.** There is no audio to capture while muted.
+4. **System volume is at zero, the app is muted, or the volume is very low.** There is no audio to capture while muted. Very quiet audio is boosted automatically (up to 20x) and a one-time notice appears; for the best recognition quality, raise the Windows volume or the playback app's volume. You can also open the output device's additional properties in Windows sound settings (Windows 11: "More sound settings" → the device → Properties) and enable "Loudness Equalization" on the Enhancements tab to even out the output level.
 5. **Transcription is not running.** Check whether the tray menu shows Start or Stop, or toggle it with `Ctrl+Alt+S`.
 6. **The subtitle window is hidden or off-screen.** Toggle it with `Ctrl+Alt+H`, or use "Reset window position" under Settings → Hotkeys & More → Window (the tray menu has the same entry).
 7. **Only the translated line is missing.** The free version does not include translation; the recognized text still appears normally. Translation is unlocked by the Full Version DLC.
@@ -97,3 +91,22 @@ That is how sentence-level translation works — it is not a network fault. The 
 - Near-continuous speech (commentary, lectures, live streams, fast talkers): when no pause can be found, the app waits up to about 10 seconds before force-cutting a sentence, so the translation lags noticeably.
 
 The original (white/grey) line stays real-time and is not affected. Only if translations stop appearing entirely or go missing frequently is the translation service itself likely unreachable — try a different source under Settings → Translation.
+
+## Q10. The subtitles disappear as soon as the player goes fullscreen?
+
+Once a second the subtitle window checks whether another window is covering it, and only then re-asserts its always-on-top status. With ordinary fullscreen playback (PotPlayer, VLC, mpv, browser fullscreen, apps like Netflix) it comes back on top within a second.
+
+If it still does not show, the player is most likely using **exclusive fullscreen** (PotPlayer's "Direct3D exclusive mode", madVR's fullscreen exclusive mode, mpv's `--d3d11-exclusive-fs`, etc.). In exclusive fullscreen nothing can be drawn over the video — not even Windows' own volume pop-up. If you change the volume and see no system volume bar, that is the case. Turn off exclusive mode in the player's settings, or use borderless windowed fullscreen instead.
+
+## Q11. How do I fill in "Local / LAN server"? {#local-server}
+
+This option is for people who already run an OpenAI-compatible translation server on their own PC or LAN. No account or key is involved. Only local and LAN addresses are accepted (localhost, 127.x, 10.x, 192.168.x, 172.16-31.x); public internet addresses are rejected.
+
+| Server | API URL (up to /v1) | Model name | Notes |
+| --- | --- | --- | --- |
+| Ollama | `http://127.0.0.1:11434/v1` | a model you have pulled, e.g. `qwen2.5:7b` | required; a wrong name returns "model not found" |
+| LM Studio | `http://127.0.0.1:1234/v1` | the identifier shown in LM Studio, or leave empty | empty = the currently loaded model; start the local server in LM Studio first |
+| llama-server (llama.cpp) | `http://127.0.0.1:8080/v1` | anything, or empty | serves one model; the name is ignored |
+| another machine on your LAN | `http://192.168.1.20:11434/v1` | as above | replace 127.0.0.1 with that machine's LAN IP and make sure the server listens on 0.0.0.0 |
+
+To verify: after entering the address and model name, play a video with speech; the translated line appearing means it works. If the server is unreachable or the model name is wrong, the subtitle bar reports a translation-source failure and falls back to Microsoft Translator automatically. Quality depends on the model you pick; general 7B+ models are usually usable for Japanese → Chinese, smaller ones are noticeably stiff.
