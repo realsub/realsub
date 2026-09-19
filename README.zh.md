@@ -59,6 +59,8 @@ RealSub 是一款 Windows 实时字幕工具:采集电脑正在播放的声音(�
 
 - **[常见问题(FAQ)](faq.zh.md)**——显卡要求、为什么没有字幕、中国大陆网络下的翻译配置、
   试用结束后会怎样、导出字幕的时间轴精度。
+- **[指南](guides/README.zh.md)**——比手册长一些的文章：没有字幕的日语视频怎么实时出中文字幕、
+  挑这类工具该看哪几点。
 - **[教程](tutorials/README.zh.md)**——可选进阶配置:本地大模型翻译、免费第三方翻译接口。
 - **隐私声明**——[简体中文](privacy.zh.md) · [繁體中文](privacy.zh-TW.md) ·
   [English](privacy.en.md) · [日本語](privacy.ja.md)

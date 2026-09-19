@@ -106,8 +106,27 @@ defaults:
   - scope: { path: "guides/README.md" }
     values:
       title: "Guides"
-      description: "Longer write-ups about live subtitling on Windows: what the built-in tools do, where they stop, and how RealSub fills the gap."
+      description: "Longer write-ups about live subtitling on Windows: what to judge these tools by, and how to put live subtitles on anything your PC plays."
       lang: en
+      seo_group: guides-index
+  - scope: { path: "guides/README.ja.md" }
+    values:
+      title: "ガイド"
+      description: "Windows でのリアルタイム字幕についての読みもの。道具を選ぶときに見る点と、英語の動画・配信に日本語字幕を付ける手順。"
+      lang: ja
+      seo_group: guides-index
+  - scope: { path: "guides/README.zh.md" }
+    values:
+      title: "指南"
+      description: "关于 Windows 实时字幕的长文:挑这类工具该看哪几点,以及怎么给日语视频、直播、讲座实时出中文字幕。"
+      lang: zh-Hans
+      seo_group: guides-index
+  - scope: { path: "guides/README.zh-TW.md" }
+    values:
+      title: "指南"
+      description: "關於 Windows 即時字幕的長文:挑這類工具該看哪幾點,以及怎麼給日語影片、直播、講座即時出中文字幕。"
+      lang: zh-Hant
+      seo_group: guides-index
   - scope: { path: "guides/english-video-japanese-subtitles.ja.md" }
     values:
       title: "字幕のない英語の動画に、リアルタイムで日本語字幕を付ける方法(Windows)"
