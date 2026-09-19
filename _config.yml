@@ -102,6 +102,37 @@ defaults:
       lang: ja
       seo_group: tutorials
 
+  # ---- 指南 / 文章 ----
+  - scope: { path: "guides/README.md" }
+    values:
+      title: "Guides"
+      description: "Longer write-ups about live subtitling on Windows: what the built-in tools do, where they stop, and how RealSub fills the gap."
+      lang: en
+  - scope: { path: "guides/english-video-japanese-subtitles.ja.md" }
+    values:
+      title: "字幕のない英語の動画に、リアルタイムで日本語字幕を付ける方法(Windows)"
+      description: "字幕のない英語の動画・配信・講義に日本語字幕を重ねる方法。道具を選ぶ 6 つの観点(音声ソース、原文と訳文の同時表示、対応言語、履歴と書き出し、認識がどこで動くか、PC 要件)と、VRAM 2GB から動く RealSub の使い方、そしてできないこと。"
+      lang: ja
+      seo_group: guide-live-subs
+  - scope: { path: "guides/japanese-video-chinese-subtitles.zh.md" }
+    values:
+      title: "看没有字幕的日语视频:怎么实时出中文字幕(Windows)"
+      description: "没有字幕的日语视频、直播、讲座怎么实时出中文字幕。挑工具看的 6 点(声音来源能否限定单个应用、原文译文能否同屏、语言组合、历史与导出、识别在哪跑、硬件门槛),以及 2GB 显存起步的 RealSub 怎么用、做不到什么。"
+      lang: zh-Hans
+      seo_group: guide-live-subs
+  - scope: { path: "guides/japanese-video-chinese-subtitles.zh-TW.md" }
+    values:
+      title: "看沒有字幕的日語影片:怎麼即時出中文字幕(Windows)"
+      description: "沒有字幕的日語影片、直播、講座怎麼即時出中文字幕。挑工具看的 6 點(聲音來源能否限定單一應用程式、原文譯文能否同時顯示、語言組合、歷史與匯出、辨識在哪跑、硬體門檻),以及 2GB 顯示記憶體起跳的 RealSub 怎麼用、做不到什麼。"
+      lang: zh-Hant
+      seo_group: guide-live-subs
+  - scope: { path: "guides/japanese-video-no-subtitles.md" }
+    values:
+      title: "How to watch Japanese video that has no subtitles (Windows)"
+      description: "Japanese video with no subtitle track: what to judge a live subtitling tool by — audio source, bilingual display, target languages, export, where recognition runs — and how to put live subtitles on anything your PC plays, recognized locally from 2 GB of VRAM."
+      lang: en
+      seo_group: guide-live-subs
+
   # ---- 隐私政策 ----
   - scope: { path: "privacy.en.md" }
     values:

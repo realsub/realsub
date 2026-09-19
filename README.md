@@ -76,6 +76,8 @@ the app switches to the free version automatically.
 
 - **[FAQ](faq.md)** — hardware requirements, why no subtitles appear, translation inside
   mainland China, what happens after the trial, export accuracy.
+- **[Guides](guides/)** — longer write-ups: how Japanese video with no subtitle track can be
+  subtitled live, and what the tools built into Windows do and do not cover.
 - **[Tutorials](tutorials/)** — optional setups: running a local LLM translator, using a free
   third-party translation endpoint.
 - **Privacy policy** — [English](privacy.en.md) · [简体中文](privacy.zh.md) ·
