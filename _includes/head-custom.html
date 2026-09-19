@@ -1,0 +1,13 @@
+{%- comment -%}
+  四语页面互相声明 hreflang(否则 Google 可能把它们当重复内容),
+  外加 favicon。分组靠 _config.yml defaults 注入的 seo_group / lang。
+  Google Search Console 验证要用 meta 的话,加在本文件末尾。
+{%- endcomment -%}
+{%- if page.seo_group -%}
+  {%- for p in site.pages -%}
+    {%- if p.seo_group == page.seo_group and p.lang -%}
+<link rel="alternate" hreflang="{{ p.lang }}" href="{{ p.url | absolute_url }}">
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+<link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">

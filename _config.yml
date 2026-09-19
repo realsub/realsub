@@ -1,0 +1,132 @@
+# GitHub Pages 站点配置(SEO 管道)。
+# 真源 = 主仓 packaging/steam/site/,同步到 C:\lsl\realsub-site 后推送,勿直接改站点仓。
+#
+# 这里刻意**不往 .md 里加 front matter**:README.md 同时是 GitHub 仓库首页,
+# 加了 YAML front matter 会在 github.com 上渲染成一张难看的表格。
+# 改用 defaults 按路径注入 title / description / lang / seo_group,内容文件保持干净。
+
+title: RealSub
+description: >-
+  Live subtitles for whatever your PC is playing — speech recognized locally on your own
+  machine, translated optionally, shown in a floating bar on top of everything.
+url: https://realsub.github.io
+baseurl: /realsub
+lang: en
+
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+twitter:
+  card: summary_large_image
+
+defaults:
+  # 全站默认:社交分享卡图片(jekyll-seo-tag 会拼成绝对地址)
+  - scope: { path: "" }
+    values:
+      image: /realsub/assets/og.png
+
+  # ---- 首页(README.md 被 Pages 当作 index)----
+  # 首页不覆盖 title:让 seo-tag 输出「RealSub | <site.description>」
+  - scope: { path: "README.md" }
+    values: { lang: en, seo_group: home }
+  - scope: { path: "README.zh.md" }
+    values:
+      title: "把电脑正在播放的声音实时变成字幕(Windows 实时字幕软件)"
+      description: "RealSub 抓取电脑正在播放的声音,在本地识别成字幕并可翻译,以悬浮字幕条显示在最上层。日语 / 英语 / 中文,2GB 显存起步,本体免费。"
+      lang: zh-Hans
+      seo_group: home
+  - scope: { path: "README.zh-TW.md" }
+    values:
+      title: "把電腦正在播放的聲音即時變成字幕(Windows 即時字幕軟體)"
+      description: "RealSub 擷取電腦正在播放的聲音,在本機辨識成字幕並可翻譯,以懸浮字幕條顯示在最上層。日語 / 英語 / 中文,2GB 顯示記憶體起跳,本體免費。"
+      lang: zh-Hant
+      seo_group: home
+  - scope: { path: "README.ja.md" }
+    values:
+      title: "PC で再生中の音声にリアルタイム字幕を重ねる Windows アプリ"
+      description: "RealSub は PC が再生している音声を取り込み、手元のマシンで認識して字幕として表示します。翻訳も可能。日本語 / 英語 / 中国語、VRAM 2GB から、本体無料。"
+      lang: ja
+      seo_group: home
+
+  # ---- FAQ ----
+  - scope: { path: "faq.md" }
+    values:
+      title: "FAQ — setup, local translation server, privacy, troubleshooting"
+      description: "Answers about installing RealSub, picking an audio source, running a translation server on your own PC or LAN, what happens to your audio, and what to do when no subtitles appear."
+      lang: en
+      seo_group: faq
+  - scope: { path: "faq.zh.md" }
+    values:
+      title: "常见问题 — 安装设置、本机翻译服务、隐私、字幕不出来怎么办"
+      description: "RealSub 常见问题:怎么选音频来源、怎么接本机或局域网的翻译服务、声音会不会上传、没有字幕时怎么排查、显卡要求。"
+      lang: zh-Hans
+      seo_group: faq
+  - scope: { path: "faq.zh-TW.md" }
+    values:
+      title: "常見問題 — 安裝設定、本機翻譯服務、隱私、字幕不出來怎麼辦"
+      description: "RealSub 常見問題:怎麼選音訊來源、怎麼接本機或區域網路的翻譯服務、聲音會不會上傳、沒有字幕時怎麼排查、顯示卡需求。"
+      lang: zh-Hant
+      seo_group: faq
+  - scope: { path: "faq.ja.md" }
+    values:
+      title: "よくある質問 — 設定、ローカル翻訳サーバー、プライバシー、字幕が出ないとき"
+      description: "RealSub のよくある質問:音声ソースの選び方、自分の PC や LAN 上の翻訳サーバーの設定、音声の取り扱い、字幕が出ないときの確認手順、動作環境。"
+      lang: ja
+      seo_group: faq
+
+  # ---- 教程 ----
+  - scope: { path: "tutorials/README.md" }
+    values:
+      title: "Tutorials — first run, per-app capture, hotkeys, history and export"
+      description: "Step-by-step guides for RealSub: the first-run wizard, subtitling one specific app instead of the whole system, global hotkeys, session history and SRT export."
+      lang: en
+      seo_group: tutorials
+  - scope: { path: "tutorials/README.zh.md" }
+    values:
+      title: "使用教程 — 首次运行、只抓某个应用、热键、历史与导出"
+      description: "RealSub 分步教程:首次运行向导、只给指定的某一个应用加字幕、全局热键、会话历史与 SRT 导出。"
+      lang: zh-Hans
+      seo_group: tutorials
+  - scope: { path: "tutorials/README.zh-TW.md" }
+    values:
+      title: "使用教學 — 首次執行、只擷取某個應用程式、快速鍵、歷史與匯出"
+      description: "RealSub 分步教學:首次執行精靈、只為指定的應用程式加字幕、全域快速鍵、工作階段歷史與 SRT 匯出。"
+      lang: zh-Hant
+      seo_group: tutorials
+  - scope: { path: "tutorials/README.ja.md" }
+    values:
+      title: "チュートリアル — 初回設定、アプリ単位の取り込み、ホットキー、履歴と書き出し"
+      description: "RealSub の手順ガイド:初回セットアップ、システム全体ではなく特定のアプリだけに字幕を付ける方法、グローバルホットキー、履歴と SRT 書き出し。"
+      lang: ja
+      seo_group: tutorials
+
+  # ---- 隐私政策 ----
+  - scope: { path: "privacy.en.md" }
+    values:
+      title: "Privacy policy — your audio never leaves your PC"
+      description: "What RealSub processes locally, what is sent out (only subtitle text, only while translation is on), and what is never collected: no account, no telemetry, no usage statistics."
+      lang: en
+      seo_group: privacy
+  - scope: { path: "privacy.zh.md" }
+    values:
+      title: "隐私政策 — 声音不离开你的电脑"
+      description: "RealSub 在本地处理什么、只有开启翻译时才发送什么(仅字幕文本)、以及一概不收集什么:无账号、无遥测、无使用统计。"
+      lang: zh-Hans
+      seo_group: privacy
+  - scope: { path: "privacy.zh-TW.md" }
+    values:
+      title: "隱私權政策 — 聲音不離開你的電腦"
+      description: "RealSub 在本機處理什麼、只有開啟翻譯時才送出什麼(僅字幕文字)、以及一概不收集什麼:無帳號、無遙測、無使用統計。"
+      lang: zh-Hant
+      seo_group: privacy
+  - scope: { path: "privacy.ja.md" }
+    values:
+      title: "プライバシーポリシー — 音声は PC の外に出ません"
+      description: "RealSub がローカルで処理する内容、翻訳が有効なときだけ送信される内容(字幕テキストのみ)、そして一切収集しないもの:アカウント不要、テレメトリなし、利用統計なし。"
+      lang: ja
+      seo_group: privacy
+
+exclude:
+  - .github/
