@@ -25,7 +25,7 @@ defaults:
   # 全站默认:社交分享卡图片(jekyll-seo-tag 会拼成绝对地址)
   - scope: { path: "" }
     values:
-      image: /realsub/assets/og.png
+      image: /assets/og.png   # 相对站点根,seo-tag 会自己拼 url+baseurl,这里再写 /realsub 会重复
 
   # ---- 首页(README.md 被 Pages 当作 index)----
   # 首页不覆盖 title:让 seo-tag 输出「RealSub | <site.description>」
