@@ -54,25 +54,25 @@ defaults:
   - scope: { path: "faq.md" }
     values:
       title: "FAQ — setup, local translation server, privacy, troubleshooting"
-      description: "Answers about installing RealSub, picking an audio source, running a translation server on your own PC or LAN, what happens to your audio, and what to do when no subtitles appear."
+      description: "Answers about installing RealSub, picking an audio source, running a translation server on your own PC or LAN, what happens to your audio, what to do when no subtitles appear, and why the first launch spends a while on the loading screen."
       lang: en
       seo_group: faq
   - scope: { path: "faq.zh.md" }
     values:
       title: "常见问题 — 安装设置、本机翻译服务、隐私、字幕不出来怎么办"
-      description: "RealSub 常见问题:怎么选音频来源、怎么接本机或局域网的翻译服务、声音会不会上传、没有字幕时怎么排查、显卡要求。"
+      description: "RealSub 常见问题:怎么选音频来源、怎么接本机或局域网的翻译服务、声音会不会上传、没有字幕时怎么排查、显卡要求、启动为什么要在「加载中」停一会儿。"
       lang: zh-Hans
       seo_group: faq
   - scope: { path: "faq.zh-TW.md" }
     values:
       title: "常見問題 — 安裝設定、本機翻譯服務、隱私、字幕不出來怎麼辦"
-      description: "RealSub 常見問題:怎麼選音訊來源、怎麼接本機或區域網路的翻譯服務、聲音會不會上傳、沒有字幕時怎麼排查、顯示卡需求。"
+      description: "RealSub 常見問題:怎麼選音訊來源、怎麼接本機或區域網路的翻譯服務、聲音會不會上傳、沒有字幕時怎麼排查、顯示卡需求、啟動為什麼要在「載入中」停一會兒。"
       lang: zh-Hant
       seo_group: faq
   - scope: { path: "faq.ja.md" }
     values:
       title: "よくある質問 — 設定、ローカル翻訳サーバー、プライバシー、字幕が出ないとき"
-      description: "RealSub のよくある質問:音声ソースの選び方、自分の PC や LAN 上の翻訳サーバーの設定、音声の取り扱い、字幕が出ないときの確認手順、動作環境。"
+      description: "RealSub のよくある質問:音声ソースの選び方、自分の PC や LAN 上の翻訳サーバーの設定、音声の取り扱い、字幕が出ないときの確認手順、動作環境、起動時に「読み込み中」が長い理由。"
       lang: ja
       seo_group: faq
 

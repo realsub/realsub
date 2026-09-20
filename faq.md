@@ -110,3 +110,15 @@ This option is for people who already run an OpenAI-compatible translation serve
 | another machine on your LAN | `http://192.168.1.20:11434/v1` | as above | replace 127.0.0.1 with that machine's LAN IP and make sure the server listens on 0.0.0.0 |
 
 To verify: after entering the address and model name, play a video with speech; the translated line appearing means it works. If the server is unreachable or the model name is wrong, the subtitle bar reports a translation-source failure and falls back to Microsoft Translator automatically. Quality depends on the model you pick; general 7B+ models are usually usable for Japanese → Chinese, smaller ones are noticeably stiff.
+
+## Q12. It sits on "Loading…" for a long time after launch. Is it frozen?
+
+No. To keep transcription fully offline, RealSub ships the speech model and the GPU runtime libraries locally, and every cold start (the first launch after booting) reads about 4 GB from disk:
+
+- Internal SSD: usually under half a minute
+- Internal hard disk drive: can take around a minute
+- USB external drive / flash drive: can take several minutes (over 2 minutes measured on one external drive), not recommended
+
+While loading, the subtitle bar shows the current stage and the seconds waited; as long as the number keeps ticking, everything is fine. Launching again in the same Windows session is much faster because the files are already cached in memory.
+
+To speed it up, keep your Steam library on an internal SSD. Steam's "Settings → Storage" can move installed content without downloading it again.
