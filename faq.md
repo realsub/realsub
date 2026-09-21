@@ -98,6 +98,8 @@ Once a second the subtitle window checks whether another window is covering it, 
 
 If it still does not show, the player is most likely using **exclusive fullscreen** (PotPlayer's "Direct3D exclusive mode", madVR's fullscreen exclusive mode, mpv's `--d3d11-exclusive-fs`, etc.). In exclusive fullscreen nothing can be drawn over the video — not even Windows' own volume pop-up. If you change the volume and see no system volume bar, that is the case. Turn off exclusive mode in the player's settings, or use borderless windowed fullscreen instead.
 
+There is one more case, and it only happens on Windows 10: if a Store app such as the built-in **Movies & TV** is **already fullscreen the moment it starts**, Windows puts that fullscreen view on a higher display layer than ordinary always-on-top windows, and the subtitle window cannot reach it. Leave fullscreen and enter it once more — from then on the subtitles stay on top.
+
 ## Q11. How do I fill in "Local / LAN server"? {#local-server}
 
 This option is for people who already run an OpenAI-compatible translation server on their own PC or LAN. No account or key is involved. Only local and LAN addresses are accepted (localhost, 127.x, 10.x, 192.168.x, 172.16-31.x); public internet addresses are rejected.
