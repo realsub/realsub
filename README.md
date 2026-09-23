@@ -62,6 +62,11 @@ player plugin can never reach.
 - **Windows only** (10 version 2004 or newer, 64-bit). No macOS or Linux build.
 - Subtitles are machine-recognized and machine-translated, so they contain errors.
 
+## See it in action
+
+- **[Live English subtitles on Japanese video — anime, streams, news, lectures (45 s)](https://www.youtube.com/watch?v=9t4z3bQwAMg)** — a real screen recording of RealSub, not sped up. The footage is AI-generated so no one's stream or show is reused; the subtitles are the real output.
+- More demos on the [RealSub Studio YouTube channel](https://www.youtube.com/@RealSubStudio).
+
 ## Download
 
 **[Get RealSub on Steam](https://store.steampowered.com/app/5227410/)**

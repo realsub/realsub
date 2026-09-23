@@ -56,6 +56,11 @@ RealSub は Windows 用のリアルタイム字幕ツールです。PC で再生
 - **Windows 専用**(10 バージョン 2004 以降、64 ビット)。macOS / Linux 版はありません。
 - 字幕は機械認識・機械翻訳の結果であり、誤りを含みます。
 
+## 動作デモ
+
+- **[字幕の無い日本語動画に英語字幕をリアルタイム表示 — アニメ・配信・ニュース・講義(45 秒)](https://www.youtube.com/watch?v=9t4z3bQwAMg)** — RealSub の実際の画面録画で、早送りはしていません。映像は AI 生成のデモ素材ですが、字幕は実際の出力です。英語音声 → 日本語字幕のデモは準備中です。
+- ほかのデモは [YouTube チャンネル RealSub Studio](https://www.youtube.com/@RealSubStudio) へ。
+
 ## ダウンロード
 
 **[Steam で RealSub を入手](https://store.steampowered.com/app/5227410/)**

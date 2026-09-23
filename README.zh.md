@@ -48,6 +48,11 @@ RealSub 是一款 Windows 实时字幕工具:采集电脑正在播放的声音(�
 - **仅支持 Windows**(10 版本 2004 或更高,64 位),没有 macOS / Linux 版本。
 - 字幕是机器识别与机器翻译的结果,错误在所难免。
 
+## 看看实际效果
+
+- **[没有字幕的日语视频,边播边出中文字幕——动画、直播、新闻、网课(45 秒)](https://www.youtube.com/watch?v=VNcz3eC6Clo)**——RealSub 实际运行的录屏,没有加速。画面是 AI 生成的演示素材,字幕是软件的真实输出。
+- 更多演示见 [YouTube 频道 RealSub Studio](https://www.youtube.com/@RealSubStudio)。
+
 ## 下载
 
 **[在 Steam 上获取 RealSub](https://store.steampowered.com/app/5227410/)**
