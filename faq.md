@@ -5,7 +5,7 @@
 
 **English** · [简体中文](faq.zh.md) · [繁體中文](faq.zh-TW.md) · [日本語](faq.ja.md)
 
-> App 1.0.0 / last updated 2026-09-13. Free tiers, model names and endpoints of third-party
+> App 1.0.1 / last updated 2026-09-26. Free tiers, model names and endpoints of third-party
 > services are the vendors' to change; their own documentation is authoritative.
 
 ---
@@ -47,7 +47,7 @@ If you have already decided to refund, that is completely fine. We would just as
 - **NVIDIA GTX 10-series or newer, from 2 GB of VRAM; 4 GB or more is more comfortable.** The default recognition model needs a little over 2 GB, so a card with exactly 2 GB can get tight when other programs are also using VRAM. **If the model fails to load on the GPU — not enough VRAM, driver trouble — RealSub switches to CPU mode automatically**, so there is nothing to set up in advance.
 - **We strongly recommend an NVIDIA GPU** — that is where RealSub performs at its best. Other GPUs go through Vulkan on a **best-effort** basis: the first run does a short performance test (tens of seconds) and only enables it if it passes. We have verified it on some GPU models, but cannot promise every card. If the test fails or Vulkan errors at runtime, RealSub falls back automatically, shows a tray notification, rewrites the device setting to what is actually running, and you can run "Re-test GPU performance" in Settings any time.
 - **Four device options: "Auto" / "GPU (NVIDIA)" / "AMD / Intel GPU (Vulkan)" / "CPU".** Auto prefers NVIDIA, then **tries** Vulkan, then CPU. Vulkan is best-effort, so **some GPUs may not get acceleration**.
-- Without an NVIDIA GPU and without usable Vulkan acceleration — or if the GPU fails to initialize or the model fails to load — RealSub automatically switches to **CPU mode** (and tells you via a tray balloon and the subtitle status line): it uses a smaller recognition model, accuracy is lower than on a GPU, latency is clearly higher, and the in-progress preview line rarely appears. **It works, but it is plainly a second-class experience** — please factor that in before buying the DLC.
+- Without an NVIDIA GPU and without usable Vulkan acceleration — or if the GPU fails to initialize or the model fails to load — RealSub automatically switches to **CPU mode** (and tells you via a tray balloon and the subtitle status line). CPU mode uses a lighter, faster recognition engine (SenseVoice): subtitles keep up, and the in-progress preview line and sentence splitting still work, but **recognition accuracy is lower than on an NVIDIA GPU**. Please try it in the free version on your own PC before buying the DLC.
 - The hard CPU requirement is a **4-core processor from the last decade with AVX2 support**.
 - You can pin the compute device to "Auto" / "GPU (NVIDIA)" / "AMD / Intel GPU (Vulkan)" / "CPU" under Settings → Transcription, and run the Vulkan check again with "Re-test GPU performance".
 
@@ -124,3 +124,11 @@ No. To keep transcription fully offline, RealSub ships the speech model and the 
 While loading, the subtitle bar shows the current stage and the seconds waited; as long as the number keeps ticking, everything is fine. Launching again in the same Windows session is much faster because the files are already cached in memory.
 
 To speed it up, keep your Steam library on an internal SSD. Steam's "Settings → Storage" can move installed content without downloading it again.
+
+## Q13. After updating, the first launch was slow / it re-tested my GPU / why is my GPU not being used?
+
+Updating to 1.0.1 changes three things:
+
+1. **The first launch re-runs the GPU performance test, once.** The test changed in this version, so the result saved by the old version no longer applies, and that one launch takes roughly ten seconds to under a minute longer. Later launches are back to normal. The new test is also stricter: weaker AMD / Intel graphics and integrated GPUs that only just passed before may now be placed in CPU mode, with a "Switched to CPU mode" notification and the device setting changed to "CPU". That is intended, not a fault — on those PCs the CPU engine keeps up better than the GPU did (see Q4). NVIDIA GPUs are not affected.
+2. **GPUs that an older version stopped using after a single error get another chance automatically.** Older versions could give up on a GPU for good after one error at runtime; those records no longer apply. (From 1.0.1 on, errors at runtime only switch to CPU for the current session; restarting RealSub goes back to the GPU.)
+3. **A device setting of "CPU" is not changed back for you.** If an older version switched your device to "CPU" (you would have seen a "Switched to CPU mode" notification at the time), the update leaves it alone — it is part of your settings. To give your GPU another chance, open Settings → Transcription and set **Device** back to **"Auto"**. If the GPU passes the test it is used; if not, RealSub simply returns to CPU mode and tells you.
