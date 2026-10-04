@@ -48,16 +48,17 @@ player plugin can never reach.
 ## What it does not do
 
 - **Singing, pure music and radio-effect voices do not produce subtitles at the moment.**
-- **Translations run one beat behind the original.** Translation works sentence by sentence and
+- **With online translation services such as Microsoft Translator, translations run one beat behind
+  the original.** Translation works sentence by sentence and
   only appears once a sentence is complete; with near-continuous speech (commentary, lectures,
   live streams) it can trail by around 10 seconds. That is by design, not a network fault.
 - **Four device options: "Auto" / "GPU (NVIDIA)" / "AMD / Intel GPU (Vulkan)" / "CPU".**
   Auto prefers NVIDIA, then **tries** Vulkan, then CPU. Vulkan is best-effort: **some GPUs may
   not get acceleration** and run in CPU mode instead, where accuracy is lower and latency is
   clearly higher.
-- **Recognition is fully offline; translation needs an internet connection** (unless you run a
-  translation service on your own machine). Audio is never sent anywhere — only subtitle text,
-  and only while translation is enabled.
+- **Recognition is fully offline, and so is the default local translation** (just install the free
+  local translation model DLC). Audio is never sent anywhere — subtitle text is sent only when an
+  online translation service such as Microsoft Translator is in use.
 - **It captures what your PC plays, not your microphone.**
 - **Windows only** (10 version 2004 or newer, 64-bit). No macOS or Linux build.
 - Subtitles are machine-recognized and machine-translated, so they contain errors.

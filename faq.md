@@ -5,17 +5,18 @@
 
 **English** · [简体中文](faq.zh.md) · [繁體中文](faq.zh-TW.md) · [日本語](faq.ja.md)
 
-> App 1.0.1 / last updated 2026-09-26. Free tiers, model names and endpoints of third-party
+> App 1.0.1 / last updated 2026-10-04. Free tiers, model names and endpoints of third-party
 > services are the vendors' to change; their own documentation is authoritative.
 
 ---
 
 ## Q1. Does translation work from mainland China?
 
-- **The default "Microsoft Translator" source works from mainland China.** We tested the full request flow from a mainland node on 2026-08-13 and got translations back in about 1.2 seconds. Nothing extra to configure.
+- **The default "Local" translation runs on your own PC and never touches the network**, so it works in mainland China as is (just install the free local translation model DLC).
+- **"Microsoft Translator" also works from mainland China** (it is used automatically when the local translation model is not installed). We tested the full request flow from a mainland node on 2026-08-13 and got translations back in about 1.2 seconds. Nothing extra to configure.
 - **Do not pick "Google Translate" in mainland China** — it times out there in our tests and will simply keep failing.
 - **Advanced users can pick "Local / LAN server"**: enter the address of an OpenAI-compatible translation server running on your own PC or LAN (Ollama, LM Studio, llama-server and the like). No account or API key is involved. Only local and LAN addresses are accepted; public internet addresses are rejected — RealSub does not integrate any third-party service that requires registration or payment.
-- If a translation source fails, RealSub falls back to the default source and tells you in the UI; transcription is never blocked. **Recognition is fully offline — subtitles keep coming even with no network at all.**
+- If a translation source fails, RealSub switches to Microsoft Translator automatically; transcription is never blocked. **Recognition is fully offline — subtitles keep coming even with no network at all.**
 
 ## Q2. Why are no subtitles appearing?
 
@@ -54,7 +55,7 @@ If you have already decided to refund, that is completely fine. We would just as
 ## Q5. Does it need the internet? Is my audio uploaded?
 
 - **Audio is processed entirely on your machine and never leaves it.** The recognition model (Whisper) and the voice-activity model (Silero VAD) are bundled with the app; recognition needs no network at all.
-- **Only translation goes online**: while it is enabled, the recognized **subtitle text** (text only) is sent to the translation service you selected in order to get a translation back. With the local translation source, even that stays on your machine.
+- **The default local translation stays offline too**: translation happens on your PC and the subtitle text never leaves it. Only when an online translation service such as Microsoft Translator or Google Translate is in use is the recognized **subtitle text** (text only) sent to that service to get a translation back.
 - No telemetry, no account, no usage statistics, no automatic crash reporting. A diagnostics zip is only created when you click Export yourself, and it stays local; API keys, your Windows user name and file paths inside it are masked automatically.
 - The full details are in the privacy policy bundled with the app and linked from the store page.
 
@@ -84,6 +85,8 @@ Yes — you can export **SRT subtitles** or **plain TXT** (Full Version required
 - The text is machine-recognized and machine-translated. **Proofread before publishing anything.**
 
 ## Q9. Why does the translation always lag behind the original text?
+
+With the default local translation, translations appear almost together with the original. The rest of this answer applies when an online translation service such as Microsoft Translator is in use.
 
 That is how sentence-level translation works — it is not a network fault. The original text streams in while the speaker is still talking; the translation is only requested once a sentence boundary is found, and the result takes another second or two to come back.
 

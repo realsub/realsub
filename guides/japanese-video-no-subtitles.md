@@ -85,14 +85,16 @@ and slower. There is no cloud tier to fall back on, by design: the audio never l
 
 Worth knowing before you install anything:
 
-- **Translation runs one beat behind the original.** It translates whole sentences, so it waits
+- **With online translation services such as Microsoft Translator, translation runs one beat
+  behind the original.** It translates whole sentences, so it waits
   for a sentence to end. In ordinary dialogue that is a few seconds. During continuous speech —
   commentary, a lecture, a stream — it can trail by up to about ten seconds. That is the cost of
   translating sentences instead of fragments, not a network problem.
 - **Singing and pure music produce nothing.** Anime openings, songs, and voices processed to
   sound like a radio broadcast are classified as non-speech and never reach the recognizer.
-- **Recognition is offline; translation is not.** Translation goes through a service, unless you
-  run a translation server on your own PC or LAN. Only the recognized text is sent — never audio.
+- **Recognition is offline, and so is the default local translation.** Only an online translation
+  service such as Microsoft Translator needs the internet, and only the recognized text is sent —
+  never audio.
 - **It is machine recognition plus machine translation.** It makes mistakes, and on accented,
   overlapping or very fast speech it makes more of them. Treat it as help understanding, not as
   a transcript of record.

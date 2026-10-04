@@ -36,7 +36,7 @@ is your responsibility.
 
 ### 2. Using a free Zhipu (bigmodel.cn) API key as the translation source
 
-For users in mainland China who want lower latency than the default source, or anyone who wants
+For users in mainland China who want lower latency than Microsoft Translator, or anyone who wants
 to plug an OpenAI-compatible endpoint into RealSub.
 
 Planned scope:
@@ -44,7 +44,7 @@ Planned scope:
 - registering at bigmodel.cn and issuing an API key (a mainland phone number is required);
 - filling in Settings → Translation → source = **LLM (OpenAI-compatible)**:
   API URL `https://open.bigmodel.cn/api/paas/v4`, your key, model name `glm-4-flash`;
-- what to do when a request fails (RealSub falls back to the default source and says so);
+- what to do when a request fails (RealSub switches to Microsoft Translator automatically);
 - **the free tier, the model name and the endpoint are the vendor's to change** — the article will
   be dated and must be re-checked against the vendor's own documentation.
 

@@ -1,6 +1,6 @@
 # RealSub Privacy Policy
 
-Last updated: 2026-08-13
+Last updated: 2026-10-04
 
 RealSub is a real-time subtitle tool that runs entirely on your own computer.
 **Speech recognition happens locally; your audio never leaves your machine.**
@@ -34,11 +34,10 @@ order to retrieve the translation. The available services and their recipients a
 
 | Translation source in Settings | Text is sent to | Applicable privacy policy |
 |---|---|---|
-| Microsoft Translator (default) | Microsoft Bing translation service (`www.bing.com`) | [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) |
+| Local (default) | The local translation model (a free DLC) translates on your own computer; **it never leaves your computer** | Not applicable |
+| Microsoft Translator | Microsoft Bing translation service (`www.bing.com`) | [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement) |
 | Google Translate | Google translation service (`translate.google.com`) | [Google Privacy Policy](https://policies.google.com/privacy) |
-| DeepL | DeepL (requires your own API key) | [DeepL Privacy Policy](https://www.deepl.com/privacy) |
-| OpenAI-compatible endpoint | **The address you enter yourself** (any compatible or self-hosted service) | Determined by that service's provider |
-| Local translation | A translation service running on your own machine (`127.0.0.1`); **it never leaves your computer** | Not applicable |
+| Local / LAN server | **A translation server you run on your own PC or LAN** (only local and LAN addresses are accepted; no API key) | Determined by the server you run |
 
 Notes about translation requests:
 
@@ -46,9 +45,12 @@ Notes about translation requests:
   no account information, no device identifier, and no audio.
 - For the Microsoft and Google options, RealSub uses their public web translation endpoints.
   Whether those services log requests is up to them and outside our control.
-- If you choose DeepL or an OpenAI-compatible endpoint, the API key you enter is **stored only in
-  the local configuration file** and is used solely to call the service you specified.
-- **With translation turned off, RealSub sends nothing to any external service** and runs fully offline.
+- If you choose "Local / LAN server", text is sent only to the local or LAN address you entered;
+  internet addresses are rejected.
+- If the local translation model is not installed (or is not offered in your region), translation
+  uses Microsoft Translator.
+- **While local translation is in use, or with translation turned off, RealSub sends nothing to any
+  external service** and runs fully offline.
 - The free version does not include translation, so no text leaves your machine when using it.
 
 ## 4. Data stored on your computer
