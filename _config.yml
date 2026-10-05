@@ -133,6 +133,12 @@ defaults:
       description: "字幕のない英語の動画・配信・講義に日本語字幕を重ねる方法。道具を選ぶ 6 つの観点(音声ソース、原文と訳文の同時表示、対応言語、履歴と書き出し、認識がどこで動くか、PC 要件)と、VRAM 2GB から動く RealSub の使い方、そしてできないこと。"
       lang: ja
       seo_group: guide-live-subs
+  - scope: { path: "guides/english-game-stream-japanese-subtitles.ja.md" }
+    values:
+      title: "パソコンで英語のゲーム実況・配信に日本語字幕を付ける方法(YouTube 以外も)"
+      description: "Twitch・Kick など YouTube 以外の英語のゲーム実況・配信に、パソコンでリアルタイム日本語字幕を付ける方法。PC で鳴っている音を手元で認識・翻訳して字幕バーに表示する手順と、配信者側の拡張機能・ブラウザの字幕機能との違い、実況ならではのコツ。"
+      lang: ja
+      seo_group: guide-game-stream
   - scope: { path: "guides/japanese-video-chinese-subtitles.zh.md" }
     values:
       title: "看没有字幕的日语视频:怎么实时出中文字幕(Windows)"
