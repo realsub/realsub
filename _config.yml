@@ -28,9 +28,12 @@ defaults:
       image: /assets/og.png   # 相对站点根,seo-tag 会自己拼 url+baseurl,这里再写 /realsub 会重复
 
   # ---- 首页(README.md 被 Pages 当作 index)----
-  # 首页不覆盖 title:让 seo-tag 输出「RealSub | <site.description>」
+  # 首页配短 title(不配时 seo-tag 会把整段 site.description 拼进 <title>,174 字符)
   - scope: { path: "README.md" }
-    values: { lang: en, seo_group: home }
+    values:
+      title: "Live subtitles for anything your PC plays (Windows)"
+      lang: en
+      seo_group: home
   - scope: { path: "README.zh.md" }
     values:
       title: "把电脑正在播放的声音实时变成字幕(Windows 实时字幕软件)"
