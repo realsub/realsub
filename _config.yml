@@ -9,8 +9,8 @@ title: RealSub
 description: >-
   Live subtitles for whatever your PC is playing — speech recognized locally on your own
   machine, translated optionally, shown in a floating bar on top of everything.
-url: https://realsub.github.io
-baseurl: /realsub
+url: https://realsub.app
+baseurl: ""
 lang: en
 
 theme: jekyll-theme-primer
@@ -25,7 +25,7 @@ defaults:
   # 全站默认:社交分享卡图片(jekyll-seo-tag 会拼成绝对地址)
   - scope: { path: "" }
     values:
-      image: /assets/og.png   # 相对站点根,seo-tag 会自己拼 url+baseurl,这里再写 /realsub 会重复
+      image: /assets/og.png   # 相对站点根,seo-tag 会自己拼 url+baseurl,这里不要再拼 baseurl
 
   # ---- 首页(README.md 被 Pages 当作 index)----
   # 首页配短 title(不配时 seo-tag 会把整段 site.description 拼进 <title>,174 字符)
