@@ -1,5 +1,7 @@
 # Guides
 
+> **This page has moved to [https://realsub.app/guides/](https://realsub.app/guides/).**
+
 **English** · [日本語](README.ja.md) · [简体中文](README.zh.md) · [繁體中文](README.zh-TW.md)
 
 Longer write-ups that are not step-by-step product documentation. For setup instructions see

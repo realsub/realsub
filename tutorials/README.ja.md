@@ -3,6 +3,8 @@
 
 # チュートリアル
 
+> **このページは [https://realsub.app/ja/faq/](https://realsub.app/ja/faq/) に移転しました。**
+
 [English](./) · [简体中文](README.zh.md) · [繁體中文](README.zh-TW.md) · **日本語**
 
 いずれも**任意の応用設定**です。RealSub は同梱モデルと既定の翻訳ソースだけで動作します。
@@ -54,5 +56,5 @@ RealSub は第三者アカウントを同梱・事前入力・仲介しません
 ## 投稿について
 
 共有したい構成があれば
-[Discussions](https://github.com/realsub/realsub/discussions) へどうぞ。良い記事はクレジット付きで
+[フィードバックページ](https://realsub.app/ja/feedback/) へどうぞ。良い記事はクレジット付きで
 このディレクトリに収録します。

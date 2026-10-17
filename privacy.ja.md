@@ -1,5 +1,7 @@
 # RealSub プライバシーポリシー
 
+> **このページは [https://realsub.app/ja/privacy/](https://realsub.app/ja/privacy/) に移転しました。**
+
 最終更新:2026-10-04
 
 RealSub は、お使いのコンピューター上だけで動作するリアルタイム字幕ツールです。

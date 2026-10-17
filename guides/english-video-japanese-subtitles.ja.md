@@ -1,5 +1,7 @@
 # 字幕のない英語の動画に、リアルタイムで日本語字幕を付ける方法(Windows)
 
+> **このページは [https://realsub.app/ja/guides/english-video-japanese-subtitles/](https://realsub.app/ja/guides/english-video-japanese-subtitles/) に移転しました。**
+
 [English](japanese-video-no-subtitles.md) · **日本語** · [简体中文](japanese-video-chinese-subtitles.zh.md) · [繁體中文](japanese-video-chinese-subtitles.zh-TW.md)
 
 英語の動画や配信には、字幕が付いていないことがよくあります。海外のライブ配信には最初から字幕が

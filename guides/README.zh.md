@@ -1,5 +1,7 @@
 # 指南
 
+> **本页面已迁移至 [https://realsub.app/zh/guides/](https://realsub.app/zh/guides/)。**
+
 [English](README.md) · [日本語](README.ja.md) · **简体中文** · [繁體中文](README.zh-TW.md)
 
 比操作手册长一些的文章。操作步骤看[使用教程](../tutorials/README.zh.md),简短答案看

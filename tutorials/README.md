@@ -3,6 +3,8 @@
 
 # Tutorials
 
+> **This page has moved to [https://realsub.app/faq/](https://realsub.app/faq/).**
+
 **English** · [简体中文](README.zh.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md)
 
 Optional setups for RealSub. **None of these are required** — RealSub works out of the box with
@@ -56,5 +58,5 @@ summarized in [FAQ Q2](../faq.md).
 ## Contributing
 
 Have a setup worth writing up? Post it in
-[Discussions](https://github.com/realsub/realsub/discussions) — good write-ups can be adopted
+[Feedback page](https://realsub.app/feedback/) — good write-ups can be adopted
 here with credit.

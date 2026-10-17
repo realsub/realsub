@@ -1,5 +1,7 @@
 # RealSub 隱私權聲明
 
+> **本頁面已遷移至 [https://realsub.app/zh-tw/privacy/](https://realsub.app/zh-tw/privacy/)。**
+
 最後更新:2026-10-04
 
 RealSub 是一款在你自己的電腦上執行的即時字幕工具。**語音識別全部在本機完成,音訊永遠不會離開你的電腦。**

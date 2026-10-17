@@ -3,6 +3,8 @@
 
 # RealSub 常见问题(FAQ)
 
+> **本页面已迁移至 [https://realsub.app/zh/faq/](https://realsub.app/zh/faq/)。**
+
 [English](faq.md) · **简体中文** · [繁體中文](faq.zh-TW.md) · [日本語](faq.ja.md)
 
 > App 1.0.1 / 最后更新 2026-10-04。第三方服务的免费额度、模型名与接口地址可能变动,以厂商官网为准。

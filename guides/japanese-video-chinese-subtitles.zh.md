@@ -1,5 +1,7 @@
 # 看没有字幕的日语视频:怎么实时出中文字幕(Windows)
 
+> **本页面已迁移至 [https://realsub.app/zh/guides/japanese-video-chinese-subtitles/](https://realsub.app/zh/guides/japanese-video-chinese-subtitles/)。**
+
 [English](japanese-video-no-subtitles.md) · [日本語](english-video-japanese-subtitles.ja.md) · **简体中文** · [繁體中文](japanese-video-chinese-subtitles.zh-TW.md)
 
 很多日语内容压根没有字幕轨。日本那边的视频平台不少是不提供字幕的,直播更是从来没有,老剧、

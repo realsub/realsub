@@ -1,5 +1,7 @@
 # RealSub Privacy Policy
 
+> **This page has moved to [https://realsub.app/privacy/](https://realsub.app/privacy/).**
+
 Last updated: 2026-10-04
 
 RealSub is a real-time subtitle tool that runs entirely on your own computer.

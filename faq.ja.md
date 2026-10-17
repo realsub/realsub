@@ -3,6 +3,8 @@
 
 # RealSub よくある質問(FAQ)
 
+> **このページは [https://realsub.app/ja/faq/](https://realsub.app/ja/faq/) に移転しました。**
+
 [English](faq.md) · [简体中文](faq.zh.md) · [繁體中文](faq.zh-TW.md) · **日本語**
 
 > App 1.0.1 / 最終更新 2026-10-04。サードパーティサービスの無料枠・モデル名・エンドポイントは

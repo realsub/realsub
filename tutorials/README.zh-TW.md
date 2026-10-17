@@ -3,6 +3,8 @@
 
 # 教學
 
+> **本頁面已遷移至 [https://realsub.app/zh-tw/faq/](https://realsub.app/zh-tw/faq/)。**
+
 [English](./) · [简体中文](README.zh.md) · **繁體中文** · [日本語](README.ja.md)
 
 這些都是**可選的進階設定**。RealSub 裝上即可用(模型內建,預設翻譯來源開箱即用),下面的教學面向
@@ -49,4 +51,4 @@ RealSub 不內建、不預填、不代理任何第三方帳號。同一步驟的
 ## 投稿
 
 有值得分享的設定?歡迎發到
-[Discussions](https://github.com/realsub/realsub/discussions),優秀內容會署名收錄到本目錄。
+[回饋頁面](https://realsub.app/zh-tw/feedback/),優秀內容會署名收錄到本目錄。

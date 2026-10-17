@@ -1,5 +1,7 @@
 # パソコンで英語のゲーム実況・配信に日本語字幕を付ける方法(YouTube 以外も)
 
+> **このページは [https://realsub.app/ja/guides/english-game-stream-japanese-subtitles/](https://realsub.app/ja/guides/english-game-stream-japanese-subtitles/) に移転しました。**
+
 **日本語** · [ガイド一覧](README.ja.md)
 
 海外のゲーム実況や配信を見ていて、「面白そうなのに何を言っているかわからない」と感じたことは

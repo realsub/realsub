@@ -3,6 +3,8 @@
 
 # RealSub FAQ
 
+> **This page has moved to [https://realsub.app/faq/](https://realsub.app/faq/).**
+
 **English** · [简体中文](faq.zh.md) · [繁體中文](faq.zh-TW.md) · [日本語](faq.ja.md)
 
 > App 1.0.1 / last updated 2026-10-04. Free tiers, model names and endpoints of third-party

@@ -1,5 +1,7 @@
 # ガイド
 
+> **このページは [https://realsub.app/ja/guides/](https://realsub.app/ja/guides/) に移転しました。**
+
 [English](README.md) · **日本語** · [简体中文](README.zh.md) · [繁體中文](README.zh-TW.md)
 
 手順書ではなく、少し長めの読みものです。設定手順は[チュートリアル](../tutorials/README.ja.md)、

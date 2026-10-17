@@ -1,5 +1,7 @@
 # RealSub 隐私声明
 
+> **本页面已迁移至 [https://realsub.app/zh/privacy/](https://realsub.app/zh/privacy/)。**
+
 最后更新:2026-10-04
 
 RealSub 是一款在你自己的电脑上运行的实时字幕工具。**语音识别全部在本地完成,音频永远不会离开你的电脑。**

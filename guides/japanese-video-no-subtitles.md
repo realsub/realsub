@@ -1,5 +1,7 @@
 # How to watch Japanese video that has no subtitles (Windows)
 
+> **This page has moved to [https://realsub.app/guides/japanese-video-no-subtitles/](https://realsub.app/guides/japanese-video-no-subtitles/).**
+
 **English** · [日本語](english-video-japanese-subtitles.ja.md) · [简体中文](japanese-video-chinese-subtitles.zh.md) · [繁體中文](japanese-video-chinese-subtitles.zh-TW.md)
 
 A lot of Japanese video simply has no subtitle track. Streaming services in Japan often ship
