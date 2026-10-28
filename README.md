@@ -8,7 +8,7 @@ RealSub is a Windows app that shows live captions (real-time subtitles) for what
 
 It can listen to the whole system's audio or to a single app you choose, and you can scroll back through earlier subtitles. The Full Version adds SRT/MP3 export. The base app is free.
 
-**Releases on Steam on 2026-10-28.**
+**Available now on Steam (released 2026-10-28).**
 
 - Steam store: https://store.steampowered.com/app/5227410/
 - FAQ: https://realsub.app/faq/

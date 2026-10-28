@@ -8,7 +8,7 @@ RealSub 是一款 Windows 电脑实时字幕软件:电脑正在播放的声音�
 
 可以收录整个系统的声音,也可以只收录你选定的某一个应用;还能上滚回看之前的字幕。完整版支持导出 SRT/MP3。基础版免费。
 
-**2026-10-28 在 Steam 发售。**
+**已在 Steam 发售(2026-10-28 发售)。**
 
 - Steam 商店页:https://store.steampowered.com/app/5227410/
 - 常见问题:https://realsub.app/zh/faq/
